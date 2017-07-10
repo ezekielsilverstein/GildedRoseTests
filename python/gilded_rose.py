@@ -9,7 +9,11 @@ class GildedRose(object):
         for item in self.items:
             if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert":
                 if item.quality > 0:
-                    if item.name != "Sulfuras, Hand of Ragnaros":
+                    if item.name == "Sulfuras, Hand of Ragnaros":
+                        pass
+                    elif item.name == "Conjured":
+                        item.quality = item.quality - 2
+                    else:
                         item.quality = item.quality - 1
             else:
                 if item.quality < 50:
